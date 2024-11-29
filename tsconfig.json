@@ -1,10 +1,14 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ESNext",
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "esModuleInterop":true,
+    "jsx": "react-jsx",  // For React 17+ JSX Transform
+
+
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -12,7 +16,6 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
 
     /* Linting */
     "strict": true,
@@ -20,6 +23,9 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": [
+    "src/**/*",
+    "jest.config.ts"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
